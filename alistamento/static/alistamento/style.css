@@ -1,0 +1,80 @@
+/* Estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    background-color: #204af1b4;
+    padding: 50px;
+    border-radius: 200px;   
+    height: 200px;  /* arredonda as bordas */
+}
+
+/* Título principal */
+h1 {
+    color: #ffffff;
+    margin-bottom: 30px;
+    
+}
+
+/* Inputs do formulário */
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    margin: 10px 0;
+    width: 400px;
+    border: 1px solid #4d3f3f;
+    position: relative;
+
+    display: flex;
+    align-items: end;
+    position: relative;
+    left: 0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Botão do formulário */
+button {
+    padding: 10px 20px;
+    background-color: #0c0b0b;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 420px;
+}
+
+/* Efeito hover no botão */
+button:hover {
+    background-color: #5555ee;
+}
+
+/* Resultado exibido */
+h2 {
+    margin-top: 30px;
+    position: relative;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+    height: 60px;
+    width: 500px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px;
+    color: #000000;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    position: relative;
+    left: -60px;
+}
+

@@ -1,0 +1,27 @@
+{% load static %}  <!-- Isso carrega os arquivos estáticos do Django -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Alistamento</title>
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'alistamento/style.css' %}">
+</head>
+<body>
+    <h1>Verifique seu alistamento</h1>
+
+    <!-- Formulário para enviar dados -->
+    <form method="post">
+        {% csrf_token %}
+        Nome: <input type="text" name="nome" required><br>
+        Ano de nascimento: <input type="number" name="ano_nasc" required><br>
+        <button type="submit">Verificar</button>
+    </form>
+
+    <!-- Exibe o resultado se existir -->
+    {% if resultado %}
+        <h2>{{ resultado }}</h2>
+    {% endif %}
+</body>
+</html>

@@ -15,24 +15,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from calculadora import views as calc_views
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('calculadora/', calc_views.index, name='calculadora'),
-]
-
-from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('calculadora/', include('calculadora.urls'), name='calculadora'),
+    path('calculadora/', include('calculadora.urls')),
+    path('alistamento/', include('alistamento.urls')),  # novo app adicionado
 ]
 
-# Versão mais simples e segura
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
