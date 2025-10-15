@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora Django</h1>
+        <form method="post">
+            {% csrf_token %}
+            <input type="number" name="num1" placeholder="Número 1" required>
+            <input type="number" name="num2" placeholder="Número 2" required>
+            <select name="operacao">
+                <option value="soma">+</option>
+                <option value="subtracao">-</option>
+                <option value="multiplicacao">*</option>
+                <option value="divisao">/</option>
+            </select>
+            <button type="submit">Calcular</button>
+        </form>
+
+        {% if resultado is not None %}
+            <h2 class="resultado">Resultado: {{ resultado }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
